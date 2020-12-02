@@ -3236,8 +3236,6 @@ static EbErrorType av1_generate_rps_info_from_user_config(
                 ref_poc = picture_control_set_ptr->picture_number;
             }
 
-            if (picture_control_set_ptr->is_overlay)
-                ref_poc -= pred_position_ptr->ref_list0.reference_list[ref_idx - LAST];
             dpb_list_idx = 0;
             do {
                 if (dpb_list_ptr[dpb_list_idx].is_used == EB_TRUE &&
